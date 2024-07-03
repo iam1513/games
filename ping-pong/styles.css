@@ -1,0 +1,35 @@
+html {
+  /* With border-box, the width and height include the padding and borders, so the element size stays as you set it, no matter how much padding or border you add. */
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+::after {
+  /* You can use it to add decorative elements, icons, or any other content that you want to appear before and after the main content. */
+  box-sizing: inherit;
+  /* All elements will inherit property  of html */
+}
+
+#table {
+  border: 2px solid black;
+  width: 700px;
+  height: 400px;
+  position: relative;
+}
+
+#paddle {
+  background-color: orange;
+  width: 10px;
+  height: 75px;
+  margin-left: 2px;
+  position: absolute;
+}
+
+#ball {
+  height: 20px;
+  width: 20px;
+  background-color: blue;
+  border-radius: 50%;
+  position: absolute;
+}
