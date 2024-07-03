@@ -58,4 +58,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     paddle.style.top = `${paddleY}px`;
   });
+
+  document.addEventListener("mousemove", (event) => {
+    let mouseDistFromTop = event.clientY;
+    let distOfTableFromTop = table.offsetTop;
+
+    let mousePointControl =
+      mouseDistFromTop - distOfTableFromTop - paddle.offsetHeight / 2;
+    paddleY = mousePointControl;
+    if (paddleY <= 0 || paddleY > table.offsetHeight - paddle.offsetHeight) {
+      return;
+    } // If bottom of the paddle touches bottom of the table , return
+
+    paddle.style.top = `${paddleY}px`;
+  });
 });
